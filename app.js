@@ -1,11 +1,13 @@
-
-const { parse } = require('url')
-next = require('next')
-const lazybuild = process.env.NODE_ENV === 'dev'
-const nextApp = next({ lazybuild })
-const handle =  nextApp.getRequestHandler()
-
+"use strict";
+const next = require('next');
+const isDev = false;
+console.log(__dirname);
+const nextApp = next({ dev:isDev,
+  dir: __dirname,
+  conf: { distDir: '.next'},
+ });
+const handle =  nextApp.getRequestHandler();
 module.exports = async function(context, callback) {
-  console.log(context.request.url)
-  handle(context.request, context.response)
+  console.log(context.request.url);
+  nextApp.prepare().then(() => handle(context.request, context.response));
 }
