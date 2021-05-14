@@ -2,4 +2,5 @@
 cd ${SRC_PKG}
 npm install 
 npm run build
-cp -r ${SRC_PKG} ${DEPLOY_PKG}
+echo ${SRC_PKG} ${DEPLOY_PKG}
+cp -r -v ${SRC_PKG} ${DEPLOY_PKG}
