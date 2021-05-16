@@ -14,7 +14,7 @@ spec:
   ingressconfig:
     annotations: null
     host: '*'
-    path: /nextapp
+    path: /nextapp/*
     tls: ""
-  method: GET
-  relativeurl: /nextapp
+  method: GET,PUT,DELETE
+  relativeurl: /nextapp/*
