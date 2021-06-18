@@ -1,6 +1,8 @@
 
 # NextJs app on Fission
 
+This example now moved to https://github.com/fission/examples/tree/master/samples/nextjs-prefixpath
+
 ## Deploy
 
 - Fission builder
